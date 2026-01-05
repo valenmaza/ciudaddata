@@ -1,0 +1,11 @@
+# Librerías 
+node_modules/
+
+# Archivos de compilación
+dist/
+
+
+# Logs de error
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
