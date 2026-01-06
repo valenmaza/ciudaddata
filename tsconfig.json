@@ -1,6 +1,5 @@
 {
   "compilerOptions": {
-    /* Configuración Básica */
     "target": "ESNext",
     "module": "NodeNext",
     "moduleResolution": "NodeNext",
@@ -10,18 +9,15 @@
     "declaration": true,
     "declarationMap": true,
 
-    /* Rigor de Tipado (Importante para tu nota) */
     "strict": true,
     "noImplicitAny": true,
     "noUncheckedIndexedAccess": true,
     
-    /* Compatibilidad y Módulos */
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "moduleDetection": "force",
     
-    /* Cambiamos esto a false para que no te de el error de imports */
     "verbatimModuleSyntax": false,
     "isolatedModules": true
   },
