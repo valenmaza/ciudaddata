@@ -17,7 +17,7 @@ export class TransitController {
     try {
       const stopId = String(req.query.stop_id || '');
       if (!stopId) {
-        const err: any = new Error('stop_id query parameter is required');
+        const err: any = new Error('parametro stop_id es obligatorio');
         err.status = 400;
         throw err;
       }
@@ -41,7 +41,7 @@ export class TransitController {
     try {
       const { location, description } = req.body;
       if (!location || typeof location !== 'string' || !description || typeof description !== 'string') {
-        const err: any = new Error('location and description are required and must be strings');
+        const err: any = new Error('location y description son obligatorios y deben ser cadenas de texto');
         err.status = 400;
         throw err;
       }

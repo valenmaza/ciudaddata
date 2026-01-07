@@ -1,7 +1,7 @@
 export type TransitRoute = {
   line: string;
   mode: 'bus' | 'metro';
-  status: 'operational' | 'delayed' | 'closed';
+  status: 'operativo' | 'retrasado' | 'cerrado';
 };
 
 const wait = (ms: number) => new Promise((r) => setTimeout(r, ms));
@@ -9,9 +9,9 @@ const wait = (ms: number) => new Promise((r) => setTimeout(r, ms));
 export const getRoutes = async (city: string): Promise<TransitRoute[]> => {
   await wait(500);
   const defaultRoutes: TransitRoute[] = [
-    { line: '1A', mode: 'bus', status: 'operational' },
-    { line: '2B', mode: 'metro', status: 'delayed' },
-    { line: '3C', mode: 'bus', status: 'operational' }
+    { line: '1A', mode: 'bus', status: 'operativo' },
+    { line: '2B', mode: 'metro', status: 'retrasado' },
+    { line: '3C', mode: 'bus', status: 'operativo' }
   ];
   return defaultRoutes.map((r) => ({ ...r, line: `${r.line}-${city.toUpperCase()}` }));
 };
