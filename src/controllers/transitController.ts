@@ -28,6 +28,15 @@ export class TransitController {
     }
   }
 
+  static async getIncidents(_req: Request, res: Response, next: NextFunction) {
+    try {
+      const incidents = await Report.find({ type: 'transit' });
+      res.json(incidents);
+    } catch (error) {
+      next(error);
+    }
+  }
+
   static async createIncident(req: Request, res: Response, next: NextFunction) {
     try {
       const { location, description } = req.body;

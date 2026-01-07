@@ -37,6 +37,15 @@ export class GeoController {
     }
   }
 
+  static async getReports(_req: Request, res: Response, next: NextFunction) {
+    try {
+      const reports = await Report.find();
+      res.json(reports);
+    } catch (error) {
+      next(error);
+    }
+  }
+
   static async getPopulation(req: Request, res: Response, next: NextFunction) {
     try {
       const country = req.params.country as string;

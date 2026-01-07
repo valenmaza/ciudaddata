@@ -64,5 +64,15 @@ router.get('/population/:country', GeoController.getPopulation);
  *         description: Reporte creado
  */
 router.post('/report', GeoController.createReport);
+/**
+ * @swagger
+ * /geo/reports:
+ *   get:
+ *     summary: Obtener todos los reportes ciudadanos
+ *     responses:
+ *       '200':
+ *         description: Lista de reportes
+ */
+router.get('/reports', GeoController.getReports);
 
 export default router;

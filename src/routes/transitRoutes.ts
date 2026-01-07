@@ -63,5 +63,15 @@ router.get('/eta', TransitController.getETA);
  *         description: Incidente registrado
  */
 router.post('/incident', TransitController.createIncident);
+/**
+ * @swagger
+ * /transit/incidents:
+ *   get:
+ *     summary: Obtener todos los incidentes de transporte
+ *     responses:
+ *       '200':
+ *         description: Lista de incidentes
+ */
+router.get('/incidents', TransitController.getIncidents);
 
 export default router;
